@@ -23,15 +23,15 @@ class oddNumber extends Thread {
 	}
 	@Override
 	public void run() {
-		System.out.printf("\nt1 start\n");
+//		System.out.printf("\nt1 start\n");
 		if (data.getN() > 1) {
 			int i = 1;
 				while(i < data.getN()) {
-			System.out.print(i + " ");
+			System.out.println("t1 start: " + i + " ");
 				i+=2;
 			}
 		}
-		System.out.println();
+//		System.out.println();
 	}
 }
 
@@ -42,15 +42,15 @@ class evenNumber extends Thread {
 	}
 	@Override
 	public void run() {
-		System.out.printf("\nt2 start\n");
+//		System.out.printf("\nt2 start\n");
 		if (data.getN() > 2) {
 			int i = 2;
 			while(i < data.getN()) {
-				System.out.print(i + " ");
+				System.out.println("t2 start: " + i + " ");
 				i+=2;
 			}
 		}
-		System.out.println();
+//		System.out.println();
 	}
 }
 
@@ -61,11 +61,11 @@ class listNumber extends Thread {
 	}
 	@Override
 	public void run() {
-		System.out.printf("\nt3 start\n");
+//		System.out.printf("\nt3 start\n");
 		for(int i = 1; i <= data.getN() ; ++i) {
-			System.out.print(i + " ");
+			System.out.println("t3 start: "+ i + " ");
 		}
-		System.out.println();
+//		System.out.println();
 	}
 }
 
@@ -76,12 +76,12 @@ class asciiChar extends Thread {
 	}
 	@Override
 	public void run() {
-		System.out.printf("\nt4 start\n");
+//		System.out.printf("\nt4 start\n");
 		int i = 65;
 		for (int j = 0; j <= 25; ++j) {
-			System.out.print((char) (i+j) + " ");
+			System.out.println("t4 start: " + (char) (i+j) + " ");
 		}
-		System.out.println();
+//		System.out.println();
 	}
 }
 
