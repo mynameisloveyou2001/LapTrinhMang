@@ -2,39 +2,39 @@ package chuong2;
 
 import java.util.Scanner;
 
-public class baitap2_fixed {
-
-	static class shareData {
-		private int num1, num2;
-		
-		public shareData() {
-			this.num1 = 0;
-			this.num2 = 0;
-		}
-		
-		public shareData(int num1, int num2) {
-			this.num1 = num1;
-			this.num2 = num2;
-		}
-		
-		public int getNum1() {
-			return num1;
-		}
-		public int getNum2() {
-			return num2;
-		}
-		
-		public void setNum1(int num1) {
-			this.num1 = num1;
-		}
-		public void setNum2(int num2) {
-			this.num2 = num2;
-		}
+class shareData2 {
+	private int num1, num2;
+	
+	public shareData2() {
+		this.num1 = 0;
+		this.num2 = 0;
 	}
 	
+	public shareData2(int num1, int num2) {
+		this.num1 = num1;
+		this.num2 = num2;
+	}
+	
+	public int getNum1() {
+		return num1;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+	public void setNum2(int num2) {
+		this.num2 = num2;
+	}
+}
+
+public class baitap2_fixed {
+
 	static class input extends Thread {
-		final shareData data;
-		public input(shareData data) {
+		final shareData2 data;
+		public input(shareData2 data) {
 			this.data = data;
 		}
 		
@@ -52,10 +52,10 @@ public class baitap2_fixed {
 		}
 	
 	static class area extends Thread {
-		final shareData data;
+		final shareData2 data;
 		private int areaValue;
 		
-		public area(shareData data) {
+		public area(shareData2 data) {
 			this.data = data;
 		}
 		
@@ -85,10 +85,10 @@ public class baitap2_fixed {
 	}
 	
 	static class perimeter extends Thread {
-		final shareData data;
+		final shareData2 data;
 		private int perimeterValue;
 		
-		public perimeter(shareData data) {
+		public perimeter(shareData2 data) {
 			this.data = data;
 		}
 		
@@ -118,7 +118,7 @@ public class baitap2_fixed {
 	}
 	
 	public static void main(String[] args) throws InterruptedException {	
-		shareData data = new shareData();
+		shareData2 data = new shareData2();
 		
 		input t1 = new input(data);
 		area t2 = new area(data);

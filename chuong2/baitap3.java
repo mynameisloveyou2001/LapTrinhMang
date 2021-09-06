@@ -27,22 +27,18 @@ public class baitap3 {
 		
 		@Override
 		public void run() {
+			System.out.println("t1 start");
 			Random rand = new Random();
 			for (int i = 0; i < 5; i++) {
-				synchronized (data) {
-					data.setNumber(rand.nextInt(20) + 1);
-					System.out.printf("So ngau nhien: %d\n", data.getNumber());
-					
-					data.notifyAll();
-				
-					try {
-						sleep(5000);
-						data.wait();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+				try {
+					sleep(2000);
+				} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 				}
+					
+				data.setNumber(rand.nextInt(20) + 1);
+				System.out.printf("So ngau nhien: %d\n", data.getNumber());
 			}
 		}
 	}
@@ -56,26 +52,16 @@ public class baitap3 {
 		
 		@Override
 		public void run() {
+			System.out.println("t2 start");
 			for (int i = 0; i < 5; i++) {
-				synchronized (data) {
-					try {
-						data.wait();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-					System.out.printf("Binh phuong: %d\n", data.getNumber() * data.getNumber());
-					
-					data.notifyAll();
-					
-					try {
-						sleep(2000);
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+				try {
+					sleep(5000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
+				
+				System.out.printf("Binh phuong: %d\n", data.getNumber() * data.getNumber());
 			}
 		}
 	}
