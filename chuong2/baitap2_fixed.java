@@ -41,15 +41,15 @@ public class baitap2_fixed {
 		@Override
 		public void run() {
 			Scanner scanner = new Scanner(System.in);
-				System.out.printf("\nt1 start");
-				System.out.printf("\nNhap chieu dai: ");
-				int temp = scanner.nextInt();
-				data.setNum1(temp);
-				System.out.printf("\nNhap chieu rong: ");
-				temp = scanner.nextInt();
-				data.setNum2(temp);
-			}
+			System.out.printf("\nt1 start");
+			System.out.printf("\nNhap chieu dai: ");
+			int temp = scanner.nextInt();
+			data.setNum1(temp);
+			System.out.printf("\nNhap chieu rong: ");
+			temp = scanner.nextInt();
+			data.setNum2(temp);
 		}
+	}
 	
 	static class area extends Thread {
 		final shareData2 data;
