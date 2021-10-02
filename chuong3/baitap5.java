@@ -51,6 +51,13 @@ public class baitap5 {
 	}
 	
 	public static void main(String[] args) throws UnknownHostException {
+		/* blocked site:
+		 * 20.205.243.166 or www.github.com
+		 * 151.101.129.69
+		 */
+		/* sample site
+		 * www.google.com
+		 */
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Search (ip or hostname): ");
 			String input = sc.nextLine();
