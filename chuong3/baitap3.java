@@ -29,5 +29,4 @@ public class baitap3 {
 								+ "Dia chi localhost: " + localHostAddress_string);
 		}
 	}
-
 }

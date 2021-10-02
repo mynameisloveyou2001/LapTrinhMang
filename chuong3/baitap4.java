@@ -15,7 +15,7 @@ public class baitap4 {
 			System.out.print("URL: ");
 			URL url = new URL(sc.nextLine());
 			URLConnection urlCon = url.openConnection();
-			String date_string = urlCon.getDate() > 0? new Date(urlCon.getDate()).toString() : "0";
+			String date_string = urlCon.getDate() > 0? new Date(urlCon.getDate()).toString() : "0";		
 			String expries = urlCon.getExpiration() > 0? new Date(urlCon.getExpiration()).toString() : "0";
 			String lastModified = urlCon.getLastModified() > 0? new Date(urlCon.getLastModified()).toString() : "0";
 			System.out.println("Ngay tao: " + date_string + "\n"
